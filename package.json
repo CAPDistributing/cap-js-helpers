@@ -1,0 +1,34 @@
+{
+  "name": "cap-helpers",
+  "version": "0.0.0-beta.0",
+  "description": "Helper functions for CAP Distributing",
+  "main": "lib/index.js",
+  "private": false,
+  "scripts": {
+    "test": "npm run single-test && npm run check-coverage",
+    "single-test": "istanbul cover -x *.test.js _mocha -- -R spec tests/*.test.js",
+    "watch-test": "mocha tests/*.test.js -w",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CAPDistributing/cap-js-helpers.git"
+  },
+  "keywords": [
+    "helpers",
+    "cap distributing"
+  ],
+  "author": "CAP Distributing <support@capdistributing.com> (https://www.capdistributing.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CAPDistributing/cap-js-helpers/issues"
+  },
+  "homepage": "https://github.com/CAPDistributing/cap-js-helpers#readme",
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "3.2.0",
+    "istanbul": "0.4.5",
+    "mocha": "2.2.5"
+  }
+}
