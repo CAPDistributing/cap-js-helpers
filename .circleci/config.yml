@@ -28,3 +28,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm test
+
+      # upload coverage file to codecov
+      - run: ./node_modules/.bin/codecov
