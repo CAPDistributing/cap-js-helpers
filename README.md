@@ -5,11 +5,11 @@ We create this package so we could easily share these basic function across all 
 
 ## Usage
 It returns the following functions:
- * **orderBy**: a function that takes 2 parameters (Array to sort, and key to sort on) and returns a sorted array. For example:
+ * **sortArray**: a function that takes 2 parameters (Array to sort, and key to sort on) and returns a sorted array. For example:
     * ```js
       var capHelpers = require('cap-helpers');
       var myArray = [{name: 'Zach'}, {name: 'Jamie'}];
-      capHelpers.orderBy(myArray, ['name']);
+      capHelpers.sortArray(myArray, ['name']);
       // returns [{name: 'Jamie'}, {name: 'Zach'}]
       ```
  * **toBase64**: a function that converts the given value to base64. For example:

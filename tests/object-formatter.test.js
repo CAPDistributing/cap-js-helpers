@@ -7,24 +7,24 @@ describe('object-formatter', function () {
 
     it('should alphabetize items in dictionary', function () {
       // Arrange
-      let payload = {
+      var payload = {
         orange: 1,
         blue: 2
       };
       // Act
-      let formattedPayload = objectFormatter.orderObject(payload);
+      var formattedPayload = objectFormatter.orderObject(payload);
       // Assert
       expect(Object.keys(formattedPayload)[0]).to.equal('blue');
     });
 
     it('should alphabetize nested items', function () {
       // Arrange
-      let payload = {
+      var payload = {
         orange: 1,
         blue: { red: 21, pink: 22 }
       };
       // Act
-      let formattedPayload = objectFormatter.orderObject(payload);
+      var formattedPayload = objectFormatter.orderObject(payload);
       // Assert
       expect(Object.keys(formattedPayload['blue'])[0]).to.equal('pink');
     });
@@ -36,7 +36,7 @@ describe('object-formatter', function () {
         blue: null
       };
       // Act
-      let formattedPayload = objectFormatter.orderObject(payload);
+      var formattedPayload = objectFormatter.orderObject(payload);
       // Assert
       expect(Object.keys(formattedPayload)[0]).to.equal('blue');
     });
@@ -51,7 +51,7 @@ describe('object-formatter', function () {
         ]
       };
       // Act
-      let formattedPayload = objectFormatter.orderObject(payload);
+      var formattedPayload = objectFormatter.orderObject(payload);
       // Assert
       expect(Object.keys(formattedPayload['blue'][0])[0]).to.equal('pink');
     });
@@ -65,7 +65,7 @@ describe('object-formatter', function () {
       var obj1 = {};
       var obj2 = {name: 'Jamie'};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -75,7 +75,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James'};
       var obj2 = {};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -85,7 +85,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James'};
       var obj2 = {name: null};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -95,7 +95,7 @@ describe('object-formatter', function () {
       var obj1 = {name: null};
       var obj2 = {name: 'Jamie'};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -105,7 +105,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James'};
       var obj2 = {name: 'Jamie'};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -115,7 +115,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James', info: {age: 25}};
       var obj2 = {name: 'James', info: {age: 24}};
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -125,7 +125,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James', getInfo: function() { return 1; } };
       var obj2 = {name: 'James', getInfo: function() { return 2; } };
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(false);
     });
@@ -135,7 +135,7 @@ describe('object-formatter', function () {
       var obj1 = {name: 'James', getInfo: function() { return 1; }, info: {age: 25}, description: null };
       var obj2 = {name: 'James', getInfo: function() { return 1; }, info: {age: 25}, description: null };
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(true);
     });
@@ -145,7 +145,7 @@ describe('object-formatter', function () {
       var obj1 = {getInfo: function() { return 1; }, name: 'James', description: null, info: {age: 25} };
       var obj2 = {name: 'James', getInfo: function() { return 1; }, info: {age: 25}, description: null };
       // Act
-      let result = objectFormatter.objAreEquals(obj1, obj2);
+      var result = objectFormatter.objAreEquals(obj1, obj2);
       // Assert
       expect(result).to.equal(true);
     });
