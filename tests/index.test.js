@@ -41,6 +41,30 @@ describe('cap-js-helpers', function() {
       expect(helpers.numberWithCommas).to.be.a('function');
     });
 
+    it('should have camelcaseToUnderscore', function() {
+      var helpers = capHelpers;
+      expect(helpers).to.have.property('camelcaseToUnderscore');
+      expect(helpers.camelcaseToUnderscore).to.be.a('function');
+    });
+
+    it('should have underscoreToCamelcase', function() {
+      var helpers = capHelpers;
+      expect(helpers).to.have.property('underscoreToCamelcase');
+      expect(helpers.underscoreToCamelcase).to.be.a('function');
+    });
+
+    it('should have underscoreToTitlecase', function() {
+      var helpers = capHelpers;
+      expect(helpers).to.have.property('underscoreToTitlecase');
+      expect(helpers.underscoreToTitlecase).to.be.a('function');
+    });
+
+    it('should have titlecaseToCamelcase', function() {
+      var helpers = capHelpers;
+      expect(helpers).to.have.property('titlecaseToCamelcase');
+      expect(helpers.titlecaseToCamelcase).to.be.a('function');
+    });
+
   });
 
 });
