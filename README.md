@@ -48,6 +48,34 @@ It returns the following functions:
       capHelpers.numberWithCommas(num);
       // returns '1,234,567.89'
       ```
+ * **camelcaseToUnderscore**: a function that takes a camelcased string, object or array and converts it to underscores. For example:
+    * ```js
+      var capHelpers = require('cap-helpers');
+      var str = 'myString';
+      capHelpers.camelcaseToUnderscore(str);
+      // returns 'my_string'
+      ```
+ * **underscoreToCamelcase**: a function that takes an underscored string, object or array and converts it to camelcase. For example:
+    * ```js
+      var capHelpers = require('cap-helpers');
+      var str = 'my_string';
+      capHelpers.underscoreToCamelcase(str);
+      // returns 'myString'
+      ```
+ * **underscoreToTitlecase**: a function that takes an underscored string, object or array and converts it to titlecase. For example:
+    * ```js
+      var capHelpers = require('cap-helpers');
+      var str = 'my_string';
+      capHelpers.underscoreToTitlecase(str);
+      // returns 'MyString'
+      ```
+ * **titlecaseToCamelcase**: a function that takes a titlecased string, object or array and converts it to camelcase. For example:
+    * ```js
+      var capHelpers = require('cap-helpers');
+      var str = 'MyString';
+      capHelpers.titlecaseToCamelcase(str);
+      // returns 'myString'
+      ```
 
 
 ## Testing
