@@ -8,7 +8,7 @@
 [![NPM Version][npm-version-image]][npm-version-link]
 [![MIT License][npm-license-image]][npm-license-link]
 
-We create this package so we could easily share these basic function across all of our applications.
+We created this package so we could easily share these basic function across all of our applications.
 
 
 ## Usage
