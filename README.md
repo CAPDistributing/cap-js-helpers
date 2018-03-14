@@ -29,7 +29,7 @@ It returns the following functions:
       ```
  * **fromBase64**: a function that converts the given value from base64. For example:
     * ```js
-      var capHelpers = require('cap-js-helpers');
+      var capHelpers = require('cap-helpers');
       var value = 'dGhpcyBpcyBhIHN0cmluZyEh';
       capHelpers.fromBase64(value);
       // returns 'this is a string!!'
