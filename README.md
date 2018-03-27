@@ -55,6 +55,11 @@ It returns the following functions:
       var str = 'myString';
       capHelpers.camelcaseToUnderscore(str);
       // returns 'my_string'
+
+      // if you pass in an object, it will convert the keys. For example:
+      var obj = {thisIsMyKey: 'thisIsMyValue'};
+      capHelpers.camelcaseToUnderscore(obj);
+      // returns {this_is_my_key: 'thisIsMyValue'}
       ```
  * **underscoreToCamelcase**: a function that takes an underscored string, object or array and converts it to camelcase. For example:
     * ```js
@@ -62,6 +67,11 @@ It returns the following functions:
       var str = 'my_string';
       capHelpers.underscoreToCamelcase(str);
       // returns 'myString'
+
+      // if you pass in an object, it will convert the keys. For example:
+      var obj = {this_is_my_key: 'this_is_my_value'};
+      capHelpers.underscoreToCamelcase(obj);
+      // returns {thisIsMyKey: 'this_is_my_value'}
       ```
  * **underscoreToTitlecase**: a function that takes an underscored string, object or array and converts it to titlecase. For example:
     * ```js
@@ -69,6 +79,11 @@ It returns the following functions:
       var str = 'my_string';
       capHelpers.underscoreToTitlecase(str);
       // returns 'MyString'
+
+      // if you pass in an object, it will convert the keys. For example:
+      var obj = {this_is_my_key: 'this_is_my_value'};
+      capHelpers.underscoreToTitlecase(obj);
+      // returns {ThisIsMyKey: 'this_is_my_value'}
       ```
  * **titlecaseToCamelcase**: a function that takes a titlecased string, object or array and converts it to camelcase. For example:
     * ```js
@@ -76,6 +91,11 @@ It returns the following functions:
       var str = 'MyString';
       capHelpers.titlecaseToCamelcase(str);
       // returns 'myString'
+
+      // if you pass in an object, it will convert the keys. For example:
+      var obj = {ThisIsMyKey: 'ThisIsMyValue'};
+      capHelpers.titlecaseToCamelcase(obj);
+      // returns {thisIsMyKey: 'ThisIsMyValue'}
       ```
 
 
