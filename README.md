@@ -1,3 +1,10 @@
+
+<p align="center">
+   <a href="https://www.capdistributing.com">
+      <img src="https://www.capdistributing.com/images/cap/cap142.min.png" width="400" >
+   </a>
+</p>
+
 # CAP Distributing's JavaScript Helpers
 
 [![Circle CI Badge][circleci-badge]][circleci-link]
